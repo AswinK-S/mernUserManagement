@@ -10,7 +10,7 @@ import adminRoutes from "./routes/admin.route.js"
 dotenv.config();
 
 mongoose
-  .connect("mongodb+srv://aswinkalathur11:H6DdFkk8DSh4hpiR@mern.cxiwlwa.mongodb.net/mern-auth?retryWrites=true&w=majority")
+  .connect(process.env.mongodb)
   .then(() => {
     console.log("Connected to MongoDB");
   })
